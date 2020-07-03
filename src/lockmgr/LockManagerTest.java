@@ -8,7 +8,7 @@ class LockManagerTest {
 
     public static void main (String[] args) {
 	test1();
-	test2();
+	//test2();
     }
 
     static void test1()
@@ -19,11 +19,6 @@ class LockManagerTest {
 	Transaction t2 = new Transaction(2, "rl b sl 10 wl a ua");
 	t1.start();
 	t2.start();
-	try {
-	    t1.join();
-	    t2.join();
-	} catch (Exception e) {
-	}
     }
 
     static void test2()
@@ -33,11 +28,6 @@ class LockManagerTest {
 	Transaction t2 = new Transaction(2, "rl a sl 2000 ua"); 
 	t1.start();
 	t2.start();
-	try {
-	    t1.join();
-	    t2.join();
-	} catch (Exception e) {
-	}
     }
 	
 
